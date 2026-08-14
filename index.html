@@ -582,5 +582,20 @@ function finale(){
 }
 
 </script>
+<audio id="birthdayMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const birthdayMusic = document.getElementById("birthdayMusic");
+
+function startBirthdayMusic() {
+  birthdayMusic.volume = 0.45;
+  birthdayMusic.play().catch(() => {});
+}
+
+// Starts when Aum taps the Enter button
+document.getElementById("startBtn")?.addEventListener("click", startBirthdayMusic);
+</script>
 </body>
 </html>
